@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #f5760e;
+    --secondary-color: #fFDE59;
+}
+
+body{
+    background-color: var(--primary-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 60px; /*Serve para deixar uma borda na lateral */
+    font-family: "Righteous", sans-serif;
+}
+
+header{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    gap: 20px; /*Distância entre os elementos */
+}
+
+header a{
+    text-decoration: none;
+    font-family: "Khand", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: white
+}
+
+header h1{
+    display: inline;
+    font-family: "Khand", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: white
+}
+
+header span{
+    font-weight: 1000;
+    font-size: 40px;
+    color: #fcca00;
+}
+
+.button{
+    display: flex;
+    gap: 15px;
+}
+
+header img{
+    height: 60px;
+    border-radius: 20px;
+}
+
+header button{
+    height: 60px;
+    width: 140px;
+    font-family: "Khand", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: var(--secondary-color);
+    color: rgb(0, 0, 0);
+    border-radius: 10px; /* Serve para deixar arredondado a borda*/
+}
+
+main{
+    height: 100%;
+    padding-top: 100px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.barraesquerda{
+    height: 40%;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barraesquerda img{
+    height: 100px;
+    width: 100px;
+    display: flex;
+}
+
+.barraesquerda span{
+    font-family: "Khand", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: white;
+    width: 120%;
+    text-align: center;
+    gap: 10px;
+}
+
+.seta img{
+    height: 350px;
+    width: 100px;
+    display: flex;
+}
+
+.centro{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.circle img{
+    position: absolute;
+    top: 25vw;
+    left: 19vw;
+    height: 33vw;
+    z-index: 2;
+}
+
+main h1{
+    position: absolute;
+    top: 13vw;
+    left: 32vw;
+    font-family: "Asap", sans-serif;
+    font-size: 7vw;
+    font-weight: 800;
+    color: #ffedce;
+    text-align: center;
+    z-index: 3;
+}
+
+.destaque{
+    color: var(--secondary-color);
+}
+
+.title{
+    color: #ffedce;
+    position: relative;
+}
+
+.title h2{
+    position: absolute;
+    right: 5vw;
+    left: 3vw;
+    top: -3vw;
+    font-size: 5vh;
+    font-family: "Imperial Script", cursive;
+    font-size: 7vw;
+    color: var(--secondary-color);
+}
+
+.glass img{
+    position: absolute;
+    z-index: 4;
+    top: 18vw;
+    right: 30vw;
+    height: 50vw; 
+}
+
+.barradireita{
+    height: 90%;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barradireita img{
+    height: 150px;
+    width: 200px;
+    display: flex;
+}
+
+.barradireita span{
+    font-family: "Khand", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: white;
+    width: 120%;
+    text-align: center;
+    gap: 10px;
+}
+
+.barradireita a{
+    font-family: "Khand", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--secondary-color);
+    width: 90%;
+    text-align: center;
+    gap: 10px;
+}
+
+.redes img{
+    position: absolute;
+    top: 30vw;
+    right: 8vw;
+    height: auto;
+    width: 8vw;
+}
+
+@media (max-width: 960px) {
+    body{
+        padding-inline: 30px;
+    }
+    .barradireita{
+        display: none;
+    }
+    .barraesquerda{
+        display: none;
+    }
+    .logo{
+        position: absolute;
+        left: 45vw;
+    }
+    .menu{
+        position: absolute;
+        top: 15vw;
+        gap: 20px; /*Distância entre os elementos */
+    }
+    .button{
+        position: absolute;
+        top: 15vw;
+        left: 75vw;
+        gap: 10px;
+    }
+    header img{
+        height: 45px;
+    }
+    header button{
+        height: 40px;
+        width: 110px;
+    }
+    main h1{
+        top: 38vw;
+        left: 18vw;
+        font-size: 10vw ;
+    }
+    .title h2{
+        font-size: 10vw;
+    }
+    .circle img{
+        top: 75vw;
+        left: -13vw;
+        height: 70vw;
+    }
+    .glass img{
+        top: 80vw;
+        right: 0;
+        height: 60vw; 
+    }
+}
+
+@media (max-width: 640px) {
+    .barradireita{
+        display: none;
+    }
+    .barraesquerda{
+        display: none;
+    }
+    .menu{
+        display: none;
+    }
+    .logo{
+        position: absolute;
+        left: 8vw;
+    }
+    .button{
+        position: absolute;
+        top: 5vw;
+        left: 60vw;
+        gap: 5px;
+    }
+    main h1{
+        top: 55vw;
+        left: 15vw;
+        font-size: 12vw ;
+    }
+    .title h2{
+        font-size: 12vw;
+    }
+    .circle img{
+        top: 95vw;
+        left: -20vw;
+        height: 85vw;
+    }
+    .glass img{
+        top: 110vw;
+        right: -18vw;
+        height: 80vw; 
+    }
+}
